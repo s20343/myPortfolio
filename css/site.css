@@ -1,0 +1,214 @@
+/* CSS Variables */
+:root {
+    /* fonts */
+    --rc-title-font: 'Playfair Display', sans-serif;
+    --rc-subtitle-font: 'Fira Sans', sans-serif;
+    --rc-heading-font: 'Bebas Neue', sans-serif;
+    --rc-body-font: 'Roboto', sans-serif;
+
+    /* colors */
+    --rc-dark-color: #212121;
+    --rc-light-color: #deeefb;
+    --rc-background-color: rgba(250, 250, 250, 0.8);
+
+    /* #region text styles */
+    /* mainHeader text styles */
+    --rc-mainHeader-font-size: 1rem;
+    --rc-mainHeader-font-size-576: 1.5rem;
+    /* --rc-mainHeader-font-size-768: ;
+    --rc-mainHeader-font-size-992: ;
+    --rc-mainHeader-font-size-1200: ;
+    --rc-mainHeader-font-size-1400: ; */
+    --rc-homeLogo-height: 8em;
+    --rc-title-color: var(--rc-dark-color);
+    --rc-title-font-size: 2.4em;
+    --rc-title-weight: 500;
+    --rc-title-line-height: .9em;
+    --rc-title-letter-spacing: .11em;
+    --rc-subtitle-font-size: 1em;
+    --rc-subtitle-weight: 400;
+    --rc-subtitle-line-height: 1.5em;
+    --rc-subtitle-spacing: .13em;
+    --rc-homeBtn-letter-spacing: .2em;
+    --rc-homeBtn-font-size: .8em;
+    --rc-homeBtn-weight: 300;
+
+    /* Main Content text styles */
+    --rc-heading-weight: 700;
+    --rc-heading-spacing: .1rem;
+    --rc-font-size: 1.2rem;
+    --rc-font-weight: 400;
+    --rc-line-height: 1.5rem;
+    /* #endregion text styles */
+}
+
+/* Element Styles */
+body {
+    font-family: var(--rc-body-font);
+    font-size: var(--rc-font-size);
+    font-weight: var(--rc-font-weight);
+    line-height: var(--rc-line-height);
+    color: var(--rc-dark-color);
+    background: var(--rc-blue-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--rc-heading-font);
+    font-weight: var(--rc-heading-weight);
+    letter-spacing: var(--rc-heading-spacing);
+    color: var(--rc-title-color);
+    text-transform: uppercase;
+}
+
+h2 img {
+    height: .8em;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    color: var(--rc-blue-500);
+}
+
+a:hover {
+    color: var(--rc-blue-400);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--rc-blue-600);
+    --bs-btn-border-color: var(--rc-blue-600);
+    --bs-btn-hover-bg: var(--rc-blue-700);
+    --bs-btn-hover-border-color: var(--rc-blue-700);
+    --bs-btn-active-bg: var(--rc-blue-800);
+    --bs-btn-active-border-color: var(--rc-blue-800);
+}
+
+#home {
+    background-image: url(/img/background/9ce1e63d-79c8-4b5c-99ef-718dc1e7a231.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--rc-blue-800);
+    position: relative;
+}
+
+#homeCover {
+    position: absolute;
+    -webkit-backdrop-filter: brightness(0.35) blur(1px);
+    backdrop-filter: brightness(0.35) blur(1px);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainHeader {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: rgba(250, 250, 250, 0.5);
+    padding: 1.5rem;
+    border: 1px solid var(--rc-light-color);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: var(--rc-mainHeader-font-size);
+    
+}
+
+
+.mainTitle {
+    text-transform: uppercase;
+    font-family: var(--rc-title-font);
+    font-size: var(--rc-title-font-size);
+    line-height: var(--rc-title-line-height);
+    font-weight: var(--rc-title-weight);
+    
+}
+
+#mainHeader .mainTitle:nth-child(2) span {
+    letter-spacing: var(--rc-title-letter-spacing);
+}
+
+.subTitle {
+    text-transform: uppercase;
+    font-family: var(--rc-subtitle-font);
+    font-size: var(--rc-subtitle-font-size);
+    line-height: var(--rc-subtitle-line-height);
+    font-weight: var(--rc-subtitle-weight);
+}
+
+.subTitle span {
+    letter-spacing: var(--rc-subtitle-spacing);
+}
+
+#mainHeader img {
+    height: var(--rc-homeLogo-height);
+    padding: 1em;
+    transition: padding .4s ease-in-out;
+}
+
+#mainHeader img:hover {
+    padding: .5em 1em 1.5em 1em;
+    transition: padding .4s ease-in-out;
+}
+footer .bi {
+    font-size: 35px; /* Or any other size you want */
+    padding: .5rem; /* Adjust padding to make more space around the icon if needed */
+}
+footer .bi-linkedin {
+    font-size: 35px;
+}
+
+footer .bi-github {
+    font-size: 35px;
+}
+
+footer .bi-envelope {
+    font-size: 35px;
+}
+
+
+/* #region ---- MEDIA QUERIES ---- */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    #home {
+        background-image: url(/img/sunset-bg-1200.jpg);
+    }
+
+    #mainHeader {
+        font-size: var(--rc-mainHeader-font-size-576);
+    }
+
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #home {
+        background-image: url(/img/sunset-bg-1920.jpg);
+    }
+
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+
+/* #endregion ---- MEDIA QUERIES ---- */
