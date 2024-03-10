@@ -1,5 +1,5 @@
 function fetchBlogData() {
-    const baseUrl = 'https://bytesandbranchesmvc-production.up.railway.app';
+    const baseUrl = '';
 
     fetch(`${baseUrl}/api/BlogPosts1/portfolio/3`)
         .then((response) => response.json())
